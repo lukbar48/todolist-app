@@ -1,0 +1,41 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #c1ff17, #00e74d);
+}
+
+.app {
+  width: clamp(500px, 500px, 700px);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: #fff;
+  background: linear-gradient(#00ebeb, #009af3);
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 20px auto;
+}
+
+.clearButton {
+  width: 40%;
+  margin: 20px auto;
+}
+
+.finished {
+  opacity: 0.5;
+  text-decoration: line-through;
+  background-color: black;
+}
