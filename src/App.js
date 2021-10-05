@@ -3,19 +3,19 @@ import styles from './App.module.scss';
 import Form from './components/Form';
 import List from './components/List';
 
-const getLocalStorageItems = () => {
-  let list = localStorage.getItem('listStorage')
-  if (list) {
-    const storage = JSON.parse(list)
-    return storage
-  } else {
-    return []
-  }
-};
+// const getLocalStorageItems = () => {
+//   let list = localStorage.getItem('listStorage')
+//   if (list) {
+//     const storage = JSON.parse(list)
+//     return storage
+//   } else {
+//     return []
+//   }
+// };
 
 function App() {
   const [name, setName] = useState('');
-  const [list, setList] = useState(getLocalStorageItems());
+  const [list, setList] = useState([]);
   const [editing, setEditing] = useState(false);
   const [editID, setEditID] = useState('');
   const [category, setCategory] = useState('all');
@@ -23,9 +23,6 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const x= localStorage.getItem('listStorage')
-    console.log({x})
-
     if (name && !editing) {
       const newListItem = {
         title: name,
@@ -52,6 +49,8 @@ function App() {
 
   const deleteItem = (id) => {
     setList(list.filter((item) => item.id !== id));
+    setEditing(false);
+    setEditID('');
   };
 
   const editItem = (id) => {
@@ -71,6 +70,12 @@ function App() {
       }),
     );
   };
+
+  const clearList = () => {
+    setList([])
+    setEditing(false);
+    setEditID('');
+  }
 
   const filterCategory = () => {
     switch (category) {
@@ -98,7 +103,13 @@ function App() {
   return (
     <section className={styles.app}>
       <h1>Todo List</h1>
-      <Form setName={setName} handleSubmit={handleSubmit} name={name} setCategory={setCategory} />
+      <Form
+        setName={setName}
+        handleSubmit={handleSubmit}
+        name={name}
+        setCategory={setCategory}
+        editing={editing}
+      />
       {list.length ? (
         <>
           <List
@@ -107,7 +118,7 @@ function App() {
             editItem={editItem}
             finishItem={finishItem}
           />
-          <button className={styles.clearButton} type="submit" onClick={() => setList([])}>
+          <button className={styles.clearButton} type="submit" onClick={() => clearList()}>
             Clear list
           </button>
         </>

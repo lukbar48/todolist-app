@@ -11,9 +11,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-  font-weight: 600;
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .buttons {
   display: flex;
@@ -23,7 +23,9 @@ li {
   padding-left: 10px;
 }
 
-.editButton, .deleteButton, .doneButton {
+.editButton,
+.deleteButton,
+.doneButton {
   font-size: 1.5rem;
   border: none;
   padding: 3px;
@@ -32,18 +34,28 @@ li {
   cursor: pointer;
 }
 
-
 .editButton {
   background-color: transparent;
   color: white;
 }
+
 .doneButton {
   background-color: transparent;
   color: white;
 }
+
 .deleteButton {
   background-color: transparent;
   color: white;
+}
+.editButton:hover {
+  color: blue;
+}
+.doneButton:hover {
+  color: green;
+}
+.deleteButton:hover {
+  color: red;
 }
 
 .finished {

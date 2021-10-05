@@ -11,6 +11,7 @@ const List = ({ itemsList, deleteItem, editItem, finishItem }) => {
               {item.title}
               <div className={styles.buttons}>
                 <button
+                title="Edit task"
                   onClick={() => editItem(item.id)}
                   aria-label="Edit"
                   className={styles.editButton}
@@ -19,6 +20,7 @@ const List = ({ itemsList, deleteItem, editItem, finishItem }) => {
                   <i className="far fa-edit"></i>
                 </button>
                 <button
+                title="Task finished"
                   onClick={(e) => finishItem(item.id, e)}
                   aria-label="Done"
                   className={styles.doneButton}
@@ -27,6 +29,7 @@ const List = ({ itemsList, deleteItem, editItem, finishItem }) => {
                   <i className="fas fa-check"></i>
                 </button>
                 <button
+                title="Delete task"
                   onClick={() => deleteItem(item.id)}
                   aria-label="Delete"
                   className={styles.deleteButton}
