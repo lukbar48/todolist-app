@@ -3,6 +3,16 @@ import styles from './App.module.scss';
 import Form from './components/Form';
 import List from './components/List';
 
+// const getLocalStorageItems = () => {
+//   let list = localStorage.getItem('listStorage')
+//   if (list) {
+//     const storage = JSON.parse(list)
+//     return storage
+//   } else {
+//     return []
+//   }
+// };
+
 function App() {
   const [name, setName] = useState('');
   const [list, setList] = useState([]);
