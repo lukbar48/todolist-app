@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "no-unused-vars": "warn",
+    "prefer-const": "warn",
+    "react/self-closing-comp": "off",
+    "arrow-body-style": 0,
+    "react/prop-types": "off",
+    "no-alert": "off",
+    "no-else-return": "off"
+  }
+}

@@ -1,0 +1,94 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #c1ff17, #00e74d);
+}
+
+.app {
+  width: clamp(500px, 55vw, 800px);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: #fff;
+  background: linear-gradient(#00ebeb, #009af3);
+  border-radius: 10px;
+}
+
+h1{
+  margin: 20px auto;
+}
+
+h4 {
+  margin: 30px auto;
+  font-weight: 300;
+}
+
+.clearButton {
+  width: 40%;
+  margin: 20px auto;
+}
+
+
+.clearButton {
+  background-image: linear-gradient(#42A1EC, #0070C9);
+  border: 1px solid #0077CC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.clearButton:disabled {
+  cursor: default;
+  opacity: .3;
+}
+
+.clearButton:hover {
+  background-image: linear-gradient(#51A9EE, #147BCD);
+  border-color: #1482D0;
+  text-decoration: none;
+}
+
+.clearButton:active {
+  background-image: linear-gradient(#3D94D9, #0067B9);
+  border-color: #006DBC;
+  outline: none;
+}
+
+.clearButton:focus {
+  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}
+
+.finished {
+  opacity: 0.5;
+  text-decoration: line-through;
+  background-color: black;
+}
